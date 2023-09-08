@@ -20,20 +20,24 @@ export default async function Home() {
       return movie;
     })
   );
-  console.log(trendingMovies);
+  
 
   return (
-    <main className=" pt-40 mx-auto px-8 xl:px-0 mt-60">
-      <section className="flex flex-col space-y-12 pb-44">
+    <main className="pt-40 mx-auto px-8 xl:px-0">
+      <section className="flex flex-col space-y-12 pb-44 items-center">
         <h1 className="text-5xl font-bold text-center text-black">
           Trending Movies
         </h1>
-        <div className=" mx-3 grid grid-cols-1 gap-y-10 gap-x-6 ml-32 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
-          {trendingMovies.map((movie) => (
-            <Movie key={movie.id} movie={movie} />
-          ))}
+        <div className="mx-3">
+          <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
+            {trendingMovies.map((movie) => (
+              <Movie key={movie.id} movie={movie} />
+            ))}
+          </div>
         </div>
       </section>
     </main>
   );
+  
+  
 }

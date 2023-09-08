@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Montserrat } from "next/font/google";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,8 @@ export default function RootLayout({
     <html lang="en" className={monserrat.className}>
       <body className=" flex flex-col">
         <Header />
-        <div>{children}</div>
+        <div className="flex-grow">{children}</div>
+        <Footer />
       </body>
     </html>
   );

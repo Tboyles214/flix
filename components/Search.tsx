@@ -18,36 +18,34 @@ const Search = () => {
     event.preventDefault();
 
     const encodedSearchTerm = encodeURIComponent(searchTerm);
-
-    console.log(searchTerm);
+    setSearchTerm("");
+   
   };
 
   return (
-    <div className="col-start-5 col-span-2 flex items-center mx-auto mb-5 justify-center mt-12 md:mt-20  ">
-      <form onSubmit={onSearch}>
-        <div className="flex rounded-full bg-white p-2 mx-auto overflow-hidden">
-          <input
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            type="text"
-            className="w-70  px-6 outline-none "
-            placeholder="Search..."
-          />
-          <Link
-            onSubmit={onSearch}
-            href={{
-              pathname: "/search",
-              query: { searchTerm: searchTerm },
-            }}
+    <div className="grid place-items-center">
+      <h1 className="mb-8 text-7xl text-white">Flix-ster</h1>
+      <form onSubmit={onSearch} className="flex rounded-full bg-white p-2 mx-auto overflow-hidden">
+        <input
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          type="text"
+          className="w-70 px-6 outline-none"
+          placeholder="Search..."
+        />
+        <Link
+          onSubmit={onSearch}
+          href={{
+            pathname: "/search",
+            query: { searchTerm: searchTerm },
+          }}
+        >
+          <button
+            className="p-4 py-4 mt-1 bg-blue-500 hover:bg-blue-700 text-white rounded-full h-full"
           >
-            <button
-              
-              className="p-4 py-4 mt-1 bg-blue-500 hover:bg-blue-700 text-white rounded-full h-full"
-            >
-              <FaSearch />
-            </button>
-          </Link>
-        </div>
+            <FaSearch />
+          </button>
+        </Link>
       </form>
     </div>
   );
