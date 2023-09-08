@@ -8,14 +8,14 @@ function Footer() {
         <div className="container mx-auto flex flex-col md:flex-row justify-center items-center space-x-4 h-16">
           <div className='flex flex-row gap-3'>
           <Link href="/">
-            <BiCameraMovie className="text-5xl text-white" />
+            <BiCameraMovie className="text-5xl text-white hover:opacity-75" />
           </Link>
           <div className="flex space-x-4">
             <a
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white text-5xl"
+              className="text-white text-5xl hover:opacity-75"
               >
               <FaGithub />
             </a>
@@ -23,7 +23,7 @@ function Footer() {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white text-5xl"
+              className="text-white text-5xl hover:opacity-75"
               >
               <FaLinkedin />
             </a>

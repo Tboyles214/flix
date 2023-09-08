@@ -9,7 +9,7 @@ function Header() {
     <header className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-4 md:p-6">
       <div className="flex justify-between items-center">
         <Link href="/">
-          <BiCameraMovie className="text-8xl text-white" />
+          <BiCameraMovie className="text-8xl text-white hover:opacity-75" />
         </Link>
       </div>
       <div className="flex justify-center mt-4">
